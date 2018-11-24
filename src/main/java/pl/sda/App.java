@@ -1,13 +1,16 @@
 package pl.sda;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import pl.sda.model.Hotel;
+import pl.sda.service.HotelService;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        HotelService hotelService = new HotelService(new Hotel());
+        System.out.println(hotelService.getRooms());
+
+        System.out.println("Available rooms:");
+        System.out.println(hotelService.getAvailableRooms());
     }
 }
